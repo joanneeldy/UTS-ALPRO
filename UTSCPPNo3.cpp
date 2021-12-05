@@ -3,19 +3,21 @@ using namespace std;
 
 int main()
 {
+    char ulang;
+    do{
     int number, i;
     bool prime = true;
-    cout<<"Masukan angka:\n";
+    cout<<"Masukan angka: ";
     cin>>number;
     if (number % 2 == 0){
-        cout<<"angka genap";
+        cout<<"Angka genap";
     } else{
-        cout<<"angka ganjil";
+        cout<<"Angka ganjil";
     }
     if (number > 0){
-        cout<<"\nangka positif";
+        cout<<"\nAngka positif";
     } else {
-        cout<<"\nangka negatif";
+        cout<<"\nAngka negatif";
     }
     if (number == 0 || number == 1 || number < 0) {
         prime = false;
@@ -32,6 +34,12 @@ int main()
     cout<<"\n"<<number<<" adalah angka prima";
     else
     cout<<"\n"<<number<<" bukan angka prima";
-
+    cout << "\nApakah ingin mengulang lagi? (y/n)\n";
+        cin >> ulang;
+    }
+        while (ulang == 'y');
+            if (ulang == 'n') {
+                cout << "Terima kasih. Semoga harimu menyenangkan ^^";
+    }
     return 0;
 }
